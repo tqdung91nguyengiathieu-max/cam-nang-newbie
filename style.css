@@ -1,0 +1,176 @@
+/* ==========================================================================
+   CẨM NANG NEWBIE - NHÀ GA VÀNG LUXURY STYLESHEET
+   Mobile-First, Dual-Track Learning Experience (Read + Video)
+   ========================================================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Base Body Styles */
+body {
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Station Tab Buttons */
+.station-tab {
+  background-color: transparent;
+  color: #94a3b8;
+  border: 1px solid transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.station-tab:hover {
+  background-color: rgba(30, 41, 59, 0.6);
+  color: #f1f5f9;
+}
+
+.station-tab.active {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(245, 158, 11, 0.15);
+}
+
+.station-tab.active .step-badge {
+  background-color: #f59e0b;
+  color: #020617;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.station-tab.completed {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.station-tab.completed .step-badge {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+/* Phone Mockup Frame (iPhone Styling) */
+.phone-mockup-card {
+  position: relative;
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7),
+              0 0 35px -5px rgba(245, 158, 11, 0.08),
+              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-mockup-card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8),
+              0 0 45px -5px rgba(245, 158, 11, 0.15);
+}
+
+/* Screen Aspect Ratio Perfectly Matched to Video */
+.phone-screen-container {
+  aspect-ratio: 1080 / 1710;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+}
+
+.phone-screen-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 1rem;
+  display: block;
+}
+
+.phone-screen-container video.hidden,
+.phone-screen-container .hidden {
+  display: none !important;
+}
+
+/* Screen Glass Reflection */
+.phone-mockup-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  border-radius: 22px 22px 0 0;
+}
+
+/* Pulsing Badge Effects */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+  }
+}
+
+.glow-amber {
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+/* Mobile View Mode Rules (Below lg screens: 1024px) */
+@media (max-width: 1023px) {
+  body.mobile-show-read .video-column {
+    display: none !important;
+  }
+  body.mobile-show-read .reading-column {
+    display: block !important;
+  }
+  body.mobile-show-video .reading-column {
+    display: none !important;
+  }
+  body.mobile-show-video .video-column {
+    display: block !important;
+  }
+}
+
+/* Station Pane Visibility */
+.station-pane {
+  display: none;
+}
+
+.station-pane.active {
+  display: grid;
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Step Complete Toggle Button states */
+.step-toggle-btn.completed {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
