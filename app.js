@@ -539,21 +539,18 @@ function checkGraduation() {
   }
 }
 
-function submitGraduationToTelegram() {
+function submitGraduationToZalo() {
   const name = document.getElementById('userNameInput')?.value.trim() || 'Thành viên mới';
   const contact = document.getElementById('userContactInput')?.value.trim() || 'Chưa cung cấp';
   const capital = document.getElementById('userCapitalSelect')?.value || '$500';
 
-  const message = `Chào Admin Nhà Ga Vàng! 🚂\nTôi đã hoàn thành xong 4 Trạm Cẩm Nang Newbie & hoàn tất bài tập Demo.\n\n👤 Họ tên: ${name}\n📱 Liên hệ: ${contact}\n💵 Vốn dự kiến: ${capital}\n\nNhờ Admin kiểm tra kết quả Demo và cấp vé vào Nhóm VIP cho tôi nhé!`;
+  const message = `Chào Admin Nhà Ga Vàng! 🚂\nTôi đã hoàn thành xong 4 Trạm Cẩm Nang Newbie & hoàn tất bài tập Demo.\n\n👤 Họ tên: ${name}\n📱 SĐT Zalo: ${contact}\n💵 Vốn dự kiến: ${capital}\n\nNhờ Admin kiểm tra kết quả Demo và cấp vé vào Nhóm VIP cho tôi nhé!`;
 
-  // Encode for Telegram URL
-  const tgUrl = `https://t.me/nhagavang_support?text=${encodeURIComponent(message)}`;
-  
-  // Copy to clipboard as fallback
-  copyToClipboard(message, 'Đã soạn tin nhắn tốt nghiệp! Đang chuyển sang Telegram...');
+  // Copy to clipboard
+  copyToClipboard(message, 'Đã sao chép tin nhắn tốt nghiệp! Đang chuyển sang Zalo...');
 
   setTimeout(() => {
-    window.open(tgUrl, '_blank');
+    window.open('https://zalo.me', '_blank');
     closeModal('vipModal');
   }, 1000);
 }
