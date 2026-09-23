@@ -748,6 +748,57 @@
           </div>
         </div>
 
+        <!-- INTERACTIVE: 2 DẠNG BÁO LỆNH THỰC TẾ TRONG NHÓM ZALO -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl relative overflow-hidden">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider">2 Dạng Báo Lệnh Thường Gặp Trong Nhóm Zalo:</span>
+            </div>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">Bấm từng dạng để xem cách xử lý</span>
+          </div>
+
+          <!-- Scenario Cards list -->
+          <div class="space-y-2 mb-4 font-mono text-xs sm:text-sm">
+            <div onclick="explainScenario('scenario1')" id="sc-card-1" class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 cursor-pointer hover:bg-amber-500/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold text-[10px] font-sans uppercase">DẠNG 1</span>
+                <span>⚡ <strong>Khớp 2 Vùng:</strong> Cắt Vùng 1 (Xa SL), Giữ Vùng 2 (Gần SL)</span>
+              </div>
+              <span class="text-[10px] font-sans font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded self-start sm:self-auto">Tối Ưu Vị Thế & Rủi Ro</span>
+            </div>
+
+            <div onclick="explainScenario('scenario2')" id="sc-card-2" class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 cursor-pointer hover:bg-emerald-500/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-emerald-500 text-slate-950 font-bold text-[10px] font-sans uppercase">DẠNG 2</span>
+                <span>🚀 <strong>Khớp 1 Vùng:</strong> Hủy Lệnh Vùng 2 & Dời SL Về Entry</span>
+              </div>
+              <span class="text-[10px] font-sans font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded self-start sm:self-auto">Ăn Lớn Hoặc Hòa Vốn</span>
+            </div>
+          </div>
+
+          <!-- Scenario Explanation Box -->
+          <div id="scenarioExplainer" class="p-4 rounded-xl bg-slate-950 border border-amber-500/30 text-xs text-slate-200">
+            <div class="flex items-center justify-between text-amber-300 font-bold mb-2 pb-2 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400"></i>
+                <span id="scenarioTitle">DẠNG 1: KHỚP 2 VÙNG - GIÁ GIẰNG CO CHƯA HÒA VỐN</span>
+              </div>
+              <span id="scenarioBadge" class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-sans">Chiến thuật 50%</span>
+            </div>
+            <div id="scenarioBody" class="space-y-2 text-slate-300 leading-relaxed font-sans">
+              <p class="text-amber-300 font-semibold mb-1">📱 <strong>Tin nhắn báo từ Chuyên gia Zalo:</strong></p>
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-amber-500/30 font-mono text-amber-300 mb-2">
+                "Cả 2 vùng 4373 & 4376 đã khớp, giá giằng co chưa bứt phá -> Anh em CẮT VÙNG 1 (4373), GIỮ VÙNG 2 (4376)!"
+              </div>
+              <p class="mb-1">🛠️ <strong>Hành động của Newbie (30 giây trên MT5):</strong></p>
+              <p class="text-slate-300 mb-2 pl-3 border-l-2 border-amber-500/50">• Vào mục Lệnh đang chạy -> Đóng lệnh Vùng 1 (4373) ở mức hòa/âm nhẹ.<br>• Giữ nguyên lệnh Vùng 2 (4376) và giữ nguyên SL (4383).</p>
+              <p class="text-emerald-400 font-semibold">💡 <strong>Tại sao làm vậy? (Bí mật Quản Lý Vốn):</strong></p>
+              <p class="text-slate-300">Vùng 2 (4376) nằm sát điểm Cắt Lỗ SL (4383), vị thế cực đẹp và mức lỗ tối đa ngắn hơn hẳn. Cắt Vùng 1 giúp bạn bớt 50% áp lực và bảo vệ tài khoản an toàn tuyệt đối!</p>
+            </div>
+          </div>
+        </div>
+
         <!-- MÁY TÍNH QUẢN LÝ VỐN KỶ LUẬT (INTERACTIVE LOT CALCULATOR) -->
         <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
@@ -839,9 +890,9 @@
                 <span class="px-2 py-0.5 rounded bg-rose-500/20 border border-rose-500/40 text-rose-400 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
                   <i data-lucide="play" class="w-2.5 h-2.5 fill-rose-400"></i> Video 3
                 </span>
-                <span class="text-xs font-bold text-slate-200 truncate">Cách Đặt Lệnh Chờ & Cài SL/TP</span>
+                <span class="text-xs font-bold text-slate-200 truncate">Xử Lý 2 Dạng Báo Lệnh Trong Nhóm Zalo</span>
               </div>
-              <span class="text-[11px] text-slate-400 font-mono">02:10</span>
+              <span class="text-[11px] text-slate-400 font-mono">02:30</span>
             </div>
 
             <div class="relative aspect-[9/14] sm:aspect-[9/13] rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 group shadow-inner" id="video-screen-3">
@@ -849,8 +900,8 @@
                 <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-amber-600 border-2 border-white/20 shadow-xl flex items-center justify-center mb-4 text-white font-black text-xl">
                   SELL
                 </div>
-                <h5 class="text-sm font-bold text-white">Thao Tác Thực Tế MT5</h5>
-                <p class="text-xs text-slate-400 mt-1 max-w-[210px]">Hướng dẫn từng vị trí bấm nút: Chọn Sell Limit, nhập giá 4373, điền SL 4380, TP 4365</p>
+                <h5 class="text-sm font-bold text-white">Mô Phỏng 2 Dạng Báo Lệnh Thực Tế</h5>
+                <p class="text-xs text-slate-400 mt-1 max-w-[220px]">Dạng 1: Khớp 2 vùng (Ưu tiên chốt vùng xa SL) | Dạng 2: Khớp 1 vùng (Kéo SL về Entry ăn lớn/hòa vốn)</p>
 
                 <button onclick="playInteractiveVideo(3)" class="mt-5 w-14 h-14 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 flex items-center justify-center shadow-lg shadow-amber-500/40 transition-transform transform group-hover:scale-110">
                   <i data-lucide="play" class="w-7 h-7 fill-slate-950 translate-x-0.5"></i>
@@ -865,30 +916,22 @@
                 </div>
                 <div class="flex-1 flex flex-col justify-center items-center space-y-3 py-4">
                   <div class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs space-y-2 font-mono">
-                    <div class="text-amber-300 font-bold font-sans">Mô phỏng nhập lệnh MT5:</div>
+                    <div class="text-amber-300 font-bold font-sans">Mô phỏng tín hiệu Nhóm Zalo Nhà Ga Vàng:</div>
                     <div class="flex justify-between">
-                      <span class="text-slate-400">Loại lệnh:</span>
-                      <span class="text-amber-400 font-bold">Sell Limit</span>
+                      <span class="text-slate-400">Vùng 1 (Xa SL):</span>
+                      <span class="text-amber-400 font-bold">4373 (Chốt trước khi dằng co)</span>
                     </div>
                     <div class="flex justify-between">
-                      <span class="text-slate-400">Khối lượng:</span>
-                      <span class="text-white font-bold">0.01</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">Giá đặt:</span>
-                      <span class="text-white font-bold">4373.00</span>
+                      <span class="text-slate-400">Vùng 2 (Gần SL):</span>
+                      <span class="text-emerald-400 font-bold">4376 (Vị thế đẹp - Giữ lại)</span>
                     </div>
                     <div class="flex justify-between">
                       <span class="text-rose-400">Stop Loss:</span>
-                      <span class="text-rose-400 font-bold">4380.00</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-emerald-400">Take Profit:</span>
-                      <span class="text-emerald-400 font-bold">4365.00</span>
+                      <span class="text-rose-400 font-bold">4383 (Cố định 7-10 giá)</span>
                     </div>
                   </div>
                   <div class="text-[11px] text-emerald-400 text-center font-bold">
-                    ✓ Đã gửi lệnh chờ thành công vào hệ thống!
+                    ✓ Kéo SL về Entry = Bất tử rủi ro!
                   </div>
                 </div>
                 <div class="space-y-2 pt-2 border-t border-slate-800">
@@ -896,7 +939,7 @@
                     <div id="sim-bar-3" class="bg-amber-500 h-full w-1/3 transition-all duration-300"></div>
                   </div>
                   <div class="flex items-center justify-between text-[11px] text-slate-400">
-                    <span id="sim-timer-3">01:05 / 02:10</span>
+                    <span id="sim-timer-3">01:05 / 02:30</span>
                     <div class="flex gap-2">
                       <button onclick="setSpeed(3, 1)" class="hover:text-amber-400 font-semibold">1x</button>
                       <button onclick="setSpeed(3, 1.5)" class="hover:text-amber-400 font-semibold">1.5x</button>
@@ -908,11 +951,11 @@
             </div>
 
             <div class="mt-4 pt-3 border-t border-slate-800/80">
-              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Tua nhanh:</div>
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Tua nhanh theo phân đoạn:</div>
               <div class="grid grid-cols-3 gap-1.5 text-[11px]">
-                <button onclick="seekVideo(3, 0)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:00 Chọn Sell Limit</button>
-                <button onclick="seekVideo(3, 40)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:40 Điền SL/TP</button>
-                <button onclick="seekVideo(3, 90)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:30 Bấm Đặt Lệnh</button>
+                <button onclick="seekVideo(3, 0)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:00 Đặt Lệnh Kép</button>
+                <button onclick="seekVideo(3, 40)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:40 Dạng 1: Khớp 2 Vùng</button>
+                <button onclick="seekVideo(3, 100)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:40 Dạng 2: Khớp 1 Vùng</button>
               </div>
             </div>
 

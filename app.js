@@ -440,12 +440,69 @@ function explainSignal(type) {
   if (titleEl) titleEl.innerText = data.title;
   if (bodyEl) bodyEl.innerHTML = data.body;
 
-  const box = document.getElementById('signalExplainer');
+}
+
+/**
+ * 5b. Interactive Signal Scenarios (2 Dạng Báo Lệnh Thực Tế)
+ */
+const scenarioDetails = {
+  scenario1: {
+    title: 'DẠNG 1: KHỚP 2 VÙNG - GIÁ GIẰNG CO CHƯA HÒA VỐN',
+    badge: 'Chiến thuật 50%',
+    badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/30 font-sans',
+    body: `
+      <p class="text-amber-300 font-semibold mb-1">📱 <strong>Tin nhắn báo từ Chuyên gia Zalo:</strong></p>
+      <div class="p-2.5 rounded-lg bg-slate-900 border border-amber-500/30 font-mono text-amber-300 mb-2">
+        "Cả 2 vùng 4373 & 4376 đã khớp, giá giằng co chưa bứt phá -> Anh em CẮT VÙNG 1 (4373), GIỮ VÙNG 2 (4376)!"
+      </div>
+      <p class="mb-1">🛠️ <strong>Hành động của Newbie (30 giây trên MT5):</strong></p>
+      <p class="text-slate-300 mb-2 pl-3 border-l-2 border-amber-500/50">• Vào mục Lệnh đang chạy -> Đóng lệnh Vùng 1 (4373) ở mức hòa/âm nhẹ.<br>• Giữ nguyên lệnh Vùng 2 (4376) và giữ nguyên SL (4383).</p>
+      <p class="text-emerald-400 font-semibold">💡 <strong>Tại sao làm vậy? (Bí mật Quản Lý Vốn):</strong></p>
+      <p class="text-slate-300">Vùng 2 (4376) nằm sát điểm Cắt Lỗ SL (4383), vị thế cực đẹp và mức lỗ tối đa ngắn hơn hẳn. Cắt Vùng 1 giúp bạn bớt 50% áp lực và bảo vệ tài khoản an toàn tuyệt đối!</p>
+    `
+  },
+  scenario2: {
+    title: 'DẠNG 2: KHỚP 1 VÙNG - GIÁ PHÁT TRUYỂN ĐÚNG SÓNG LỜI MẠNH',
+    badge: 'Ăn Lớn Hoặc Hòa Vốn',
+    badgeClass: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-sans',
+    body: `
+      <p class="text-emerald-300 font-semibold mb-1">📱 <strong>Tin nhắn báo từ Chuyên gia Zalo:</strong></p>
+      <div class="p-2.5 rounded-lg bg-slate-900 border border-emerald-500/30 font-mono text-emerald-300 mb-2">
+        "Giá khớp Vùng 1 (4373) và đã chạy +80 pips (8 giá) -> HỦY LỆNH CHỜ VÙNG 2 (4376) & DỜI SL VÙNG 1 VỀ ENTRY!"
+      </div>
+      <p class="mb-1">🛠️ <strong>Hành động của Newbie (30 giây trên MT5):</strong></p>
+      <p class="text-slate-300 mb-2 pl-3 border-l-2 border-emerald-500/50">• Xóa/hủy ngay lệnh Limit Vùng 2 (4376) chưa khớp.<br>• Sửa điểm Cắt Lỗ SL của Vùng 1 từ 4383 về đúng giá vào 4373 (Entry).</p>
+      <p class="text-emerald-400 font-semibold">💡 <strong>Tại sao làm vậy? (Trạng Thái Bất Tử):</strong></p>
+      <p class="text-slate-300">Khi SL = Entry, lệnh của bạn rơi vào kịch bản <strong>"Ăn lớn hoặc Hòa vốn"</strong>. Giá tăng tiếp bạn thắng đậm (TP1, TP2), giá quay đầu chạm SL bạn hòa tiền, không mất đồng nào!</p>
+    `
+  }
+};
+
+function explainScenario(type) {
+  const data = scenarioDetails[type];
+  if (!data) return;
+
+  const titleEl = document.getElementById('scenarioTitle');
+  const badgeEl = document.getElementById('scenarioBadge');
+  const bodyEl = document.getElementById('scenarioBody');
+
+  if (titleEl) titleEl.innerText = data.title;
+  if (badgeEl) {
+    badgeEl.innerText = data.badge;
+    badgeEl.className = `text-[10px] px-2 py-0.5 rounded ${data.badgeClass}`;
+  }
+  if (bodyEl) bodyEl.innerHTML = data.body;
+
+  const box = document.getElementById('scenarioExplainer');
   if (box) {
     box.classList.add('ring-2', 'ring-amber-400');
     setTimeout(() => {
       box.classList.remove('ring-2', 'ring-amber-400');
     }, 600);
+  }
+
+  if (window.lucide) {
+    lucide.createIcons();
   }
 }
 
