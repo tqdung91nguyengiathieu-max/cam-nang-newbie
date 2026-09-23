@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateLotSize();
   setMobileMode('read');
   checkGraduation();
+  explainScenario('scenario1');
 
   // Check URL hash if any (e.g. #station-2)
   const hash = window.location.hash;
@@ -447,33 +448,91 @@ function explainSignal(type) {
  */
 const scenarioDetails = {
   scenario1: {
-    title: 'DẠNG 1: KHỚP 2 VÙNG - GIÁ GIẰNG CO CHƯA HÒA VỐN',
-    badge: 'Chiến thuật 50%',
-    badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/30 font-sans',
+    title: 'DẠNG 1: KHỚP CẢ 2 VÙNG - GIÁ GIẰNG CO CHƯA HÒA VỐN',
+    badge: 'Ưu Tiên Vùng Gần SL',
+    badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-sans',
     body: `
-      <p class="text-amber-300 font-semibold mb-1">📱 <strong>Tin nhắn báo từ Chuyên gia Zalo:</strong></p>
-      <div class="p-2.5 rounded-lg bg-slate-900 border border-amber-500/30 font-mono text-amber-300 mb-2">
-        "Cả 2 vùng 4373 & 4376 đã khớp, giá giằng co chưa bứt phá -> Anh em CẮT VÙNG 1 (4373), GIỮ VÙNG 2 (4376)!"
+      <div class="p-3 rounded-xl bg-slate-900 border border-amber-500/30 space-y-1.5">
+        <div class="text-[11px] text-slate-400 uppercase font-semibold">Tín hiệu thực tế đã bắn trong nhóm VIP Zalo:</div>
+        <div class="font-mono text-amber-300 font-bold text-xs sm:text-sm">
+          🚂 Sell Limit: 4373 (Vùng 1) - 4376 (Vùng 2) | SL: 4383
+        </div>
       </div>
-      <p class="mb-1">🛠️ <strong>Hành động của Newbie (30 giây trên MT5):</strong></p>
-      <p class="text-slate-300 mb-2 pl-3 border-l-2 border-amber-500/50">• Vào mục Lệnh đang chạy -> Đóng lệnh Vùng 1 (4373) ở mức hòa/âm nhẹ.<br>• Giữ nguyên lệnh Vùng 2 (4376) và giữ nguyên SL (4383).</p>
-      <p class="text-emerald-400 font-semibold">💡 <strong>Tại sao làm vậy? (Bí mật Quản Lý Vốn):</strong></p>
-      <p class="text-slate-300">Vùng 2 (4376) nằm sát điểm Cắt Lỗ SL (4383), vị thế cực đẹp và mức lỗ tối đa ngắn hơn hẳn. Cắt Vùng 1 giúp bạn bớt 50% áp lực và bảo vệ tài khoản an toàn tuyệt đối!</p>
+
+      <div class="space-y-1.5">
+        <div class="text-amber-300 font-bold flex items-center gap-1.5">
+          <i data-lucide="message-square" class="w-4 h-4 text-amber-400"></i>
+          <span>📱 Thông báo Chuyên gia gửi trên Zalo:</span>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-900/90 border border-amber-500/40 text-amber-200 font-mono text-xs">
+          "Cả 2 vùng (4373 & 4376) đã khớp, nến giằng co chưa bứt phá -> Anh em CẮT VÙNG 1 (4373), GIỮ VÙNG 2 (4376)!"
+        </div>
+      </div>
+
+      <div class="space-y-1.5">
+        <div class="text-white font-bold flex items-center gap-1.5">
+          <i data-lucide="check-square" class="w-4 h-4 text-amber-400"></i>
+          <span>🛠️ Hướng dẫn Newbie làm đúng 2 bước trên MT5 (30 Giây):</span>
+        </div>
+        <div class="pl-3 border-l-2 border-amber-500/60 space-y-1 text-slate-200">
+          <p>• <strong>Bước 1:</strong> Mở mục "Lệnh đang chạy" trên MT5 -> Bấm chốt đóng lệnh Vùng 1 (4373) ở mức cắt hòa hoặc âm nhẹ vài Pips.</p>
+          <p>• <strong>Bước 2:</strong> Giữ nguyên lệnh Vùng 2 (4376) và giữ nguyên điểm Stoploss SL (4383).</p>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 text-amber-200 text-xs space-y-1">
+        <div class="font-bold text-amber-300 flex items-center gap-1">
+          <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i>
+          <span>Giải mã đơn giản: Tại sao lại cắt Vùng 1, giữ Vùng 2?</span>
+        </div>
+        <p class="leading-relaxed">
+          Vùng 2 (4376) nằm sát điểm Cắt Lỗ SL (4383) hơn, nên khoảng lỗ tối đa rất ngắn (chỉ 7 giá thay vì 10 giá) và vị thế đẹp hơn nhiều. Việc cắt Vùng 1 giúp bạn cắt giảm ngay 50% rủi ro tài khoản mà vẫn giữ trọn vẹn cơ hội ăn lãi lớn ở Vùng 2!
+        </p>
+      </div>
     `
   },
   scenario2: {
     title: 'DẠNG 2: KHỚP 1 VÙNG - GIÁ PHÁT TRUYỂN ĐÚNG SÓNG LỜI MẠNH',
     badge: 'Ăn Lớn Hoặc Hòa Vốn',
-    badgeClass: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-sans',
+    badgeClass: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-sans',
     body: `
-      <p class="text-emerald-300 font-semibold mb-1">📱 <strong>Tin nhắn báo từ Chuyên gia Zalo:</strong></p>
-      <div class="p-2.5 rounded-lg bg-slate-900 border border-emerald-500/30 font-mono text-emerald-300 mb-2">
-        "Giá khớp Vùng 1 (4373) và đã chạy +80 pips (8 giá) -> HỦY LỆNH CHỜ VÙNG 2 (4376) & DỜI SL VÙNG 1 VỀ ENTRY!"
+      <div class="p-3 rounded-xl bg-slate-900 border border-emerald-500/30 space-y-1.5">
+        <div class="text-[11px] text-slate-400 uppercase font-semibold">Tín hiệu thực tế đã bắn trong nhóm VIP Zalo:</div>
+        <div class="font-mono text-emerald-300 font-bold text-xs sm:text-sm">
+          🚂 Sell Limit: 4373 (Vùng 1) - 4376 (Vùng 2) | SL: 4383
+        </div>
       </div>
-      <p class="mb-1">🛠️ <strong>Hành động của Newbie (30 giây trên MT5):</strong></p>
-      <p class="text-slate-300 mb-2 pl-3 border-l-2 border-emerald-500/50">• Xóa/hủy ngay lệnh Limit Vùng 2 (4376) chưa khớp.<br>• Sửa điểm Cắt Lỗ SL của Vùng 1 từ 4383 về đúng giá vào 4373 (Entry).</p>
-      <p class="text-emerald-400 font-semibold">💡 <strong>Tại sao làm vậy? (Trạng Thái Bất Tử):</strong></p>
-      <p class="text-slate-300">Khi SL = Entry, lệnh của bạn rơi vào kịch bản <strong>"Ăn lớn hoặc Hòa vốn"</strong>. Giá tăng tiếp bạn thắng đậm (TP1, TP2), giá quay đầu chạm SL bạn hòa tiền, không mất đồng nào!</p>
+
+      <div class="space-y-1.5">
+        <div class="text-emerald-300 font-bold flex items-center gap-1.5">
+          <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+          <span>📱 Thông báo Chuyên gia gửi trên Zalo:</span>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-900/90 border border-emerald-500/40 text-emerald-200 font-mono text-xs">
+          "Đã khớp Vùng 1 (4373) và giá rớt mạnh +80 Pips (+8 giá) -> HỦY LỆNH VÙNG 2 (4376) & DỜI SL VỀ ENTRY (4373)!"
+        </div>
+      </div>
+
+      <div class="space-y-1.5">
+        <div class="text-white font-bold flex items-center gap-1.5">
+          <i data-lucide="check-square" class="w-4 h-4 text-emerald-400"></i>
+          <span>🛠️ Hướng dẫn Newbie làm đúng 2 bước trên MT5 (30 Giây):</span>
+        </div>
+        <div class="pl-3 border-l-2 border-emerald-500/60 space-y-1 text-slate-200">
+          <p>• <strong>Bước 1:</strong> Mở mục "Lệnh chờ" trên MT5 -> Bấm XÓA/HỦY ngay lệnh Sell Limit Vùng 2 (4376) chưa khớp.</p>
+          <p>• <strong>Bước 2:</strong> Mở lệnh Vùng 1 (4373) đang chạy -> Sửa điểm Stoploss (SL) từ 4383 về đúng giá vào 4373 (Entry).</p>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-emerald-200 text-xs space-y-1">
+        <div class="font-bold text-emerald-300 flex items-center gap-1">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          <span>Giải mã đơn giản: Trạng thái BẤT TỬ RỦI RO là gì?</span>
+        </div>
+        <p class="leading-relaxed">
+          Hủy Vùng 2 giúp giá không quay lại dính 2 đầu. Khi kéo SL về Entry (4373), tài khoản của bạn ở thế <strong>"Thắng thì ĂN LỚN (đạt TP1, TP2), thua thì HÒA VỐN"</strong>. Ngay cả khi thị trường giật ngược lại, bạn chỉ hòa tiền chứ không mất đồng nào!
+        </p>
+      </div>
     `
   }
 };
