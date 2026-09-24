@@ -745,68 +745,6 @@
           </div>
         </div>
 
-        <!-- MÁY TÍNH QUẢN LÝ VỐN KỶ LUẬT (INTERACTIVE LOT CALCULATOR) -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-            <div>
-              <h4 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                <i data-lucide="calculator" class="w-4 h-4 text-amber-400"></i>
-                <span>Máy Tính Lot Tự Động Theo Số Vốn Của Bạn</span>
-              </h4>
-              <p class="text-xs text-slate-400">Được lập trình theo chuẩn quản trị rủi ro 2% của Nhà Ga Vàng</p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <!-- Input Vốn -->
-            <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nhập số vốn bạn dự định giao dịch ($ USD):</label>
-              <div class="flex gap-2">
-                <div class="relative flex-1">
-                  <span class="absolute left-3 top-2.5 text-slate-400 font-bold text-sm">$</span>
-                  <input type="number" id="capitalInput" value="500" min="100" max="100000" step="50" oninput="calculateLotSize()" class="w-full pl-8 pr-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <!-- Quick preset buttons -->
-                <div class="flex gap-1">
-                  <button onclick="setCapital(300)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700">$300</button>
-                  <button onclick="setCapital(500)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-amber-400 border border-amber-500/30">$500</button>
-                  <button onclick="setCapital(1000)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700">$1,000</button>
-                  <button onclick="setCapital(2000)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700">$2,000</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kết Quả Tính Toán Trực Quan -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Khối Lượng Khuyên Dùng</div>
-                <div class="text-base sm:text-lg font-black text-amber-400 mt-1" id="resLot">0.02 Lot</div>
-                <div class="text-[10px] text-slate-500" id="resLotDetail">Chia 2 lệnh 0.01</div>
-              </div>
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Mức Rủi Ro Tối Đa (Dính SL)</div>
-                <div class="text-base sm:text-lg font-black text-rose-400 mt-1" id="resRisk">-$10.00</div>
-                <div class="text-[10px] text-rose-400/80 font-bold" id="resRiskPercent">2.0% Vốn</div>
-              </div>
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Lợi Nhuận Khi Cán TP1</div>
-                <div class="text-base sm:text-lg font-black text-emerald-400 mt-1" id="resTP1">+$10.00</div>
-                <div class="text-[10px] text-slate-500">Chốt 50% & SL hòa</div>
-              </div>
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
-                <div class="text-[10px] text-slate-400 uppercase font-semibold">Lợi Nhuận Khi Cán TP2</div>
-                <div class="text-base sm:text-lg font-black text-emerald-300 mt-1" id="resTP2">+$20.00</div>
-                <div class="text-[10px] text-emerald-400/80 font-bold">R:R = 1:3.0</div>
-              </div>
-            </div>
-
-            <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/20 text-xs text-emerald-300 flex items-start gap-2">
-              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
-              <span><strong>Định luật an toàn:</strong> Khi tuân thủ đúng con số Lot trên, ngay cả khi gặp chuỗi 3 lệnh dính SL liên tiếp bạn chỉ hao hụt ~6% tài khoản. Hoàn toàn không bao giờ lo cháy!</span>
-            </div>
-          </div>
-        </div>
-
         <!-- Navigation Buttons -->
         <div class="flex items-center justify-between pt-2">
           <button onclick="switchStation(2)" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs flex items-center gap-2">
