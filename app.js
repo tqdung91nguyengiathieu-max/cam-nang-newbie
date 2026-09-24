@@ -66,6 +66,16 @@ function switchStation(stationId) {
     }
   }
 
+  // Toggle Hero Intro Banner (Only show on Station 1)
+  const heroBanner = document.getElementById('hero-banner');
+  if (heroBanner) {
+    if (stationId === 1) {
+      heroBanner.classList.remove('hidden');
+    } else {
+      heroBanner.classList.add('hidden');
+    }
+  }
+
   // Scroll to station top on mobile
   if (window.innerWidth < 1024) {
     const pane = document.getElementById(`station-${stationId}`);
