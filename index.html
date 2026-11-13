@@ -184,205 +184,9 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex-1 w-full">
 
     <!-- ========================================================================= -->
-    <!-- TRẠM 0: TƯ DUY TRADE CƠM GẠO (TRƯỚC KHI LÊN TÀU) -->
-    <!-- ========================================================================= -->
-    <section id="station-0" class="station-pane active grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-
-      <!-- CỘT TRÁI: LỜI NHẮN CHÂN THÀNH -->
-      <div class="reading-column lg:col-span-7 space-y-6">
-
-        <!-- Header Trạm -->
-        <div class="bg-slate-900/90 border border-emerald-500/30 rounded-2xl p-5 shadow-lg">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-black text-lg">
-              00
-            </div>
-            <div>
-              <span class="text-xs uppercase tracking-wider font-semibold text-emerald-400">Trạm Tư Duy — Đọc Trước Khi Lên Tàu</span>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Tư Duy "Trade Cơm Gạo" Đúng Đắn</h3>
-            </div>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
-            Trước khi mở tài khoản hay bấm lệnh đầu tiên, hãy dành <strong class="text-emerald-300">1 phút 39 giây</strong> xem video "Hồ sơ vụ án số 01" và đọc những lời nhắn bên dưới.
-            Kỹ thuật học 1 tuần là xong — nhưng <strong class="text-amber-300">tư duy sai thì kỹ thuật giỏi đến đâu cũng cháy tài khoản</strong>.
-          </p>
-          <div class="mt-3">
-            <button onclick="triggerWatchVideo(0)" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all shadow">
-              <i data-lucide="play-circle" class="w-4 h-4"></i>
-              <span>Xem Video: Tư Duy Trade Cơm Gạo (1:39)</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Tóm tắt 3 manh mối -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
-            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 01</div>
-            <h4 class="text-sm font-black text-white mt-1">Thắng cuối tuần, không cần thắng mọi lệnh</h4>
-            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Ngày mưa (chạm SL) mất 1 bát phở. Ngày nắng (đạt TP) thu cả ngày lương.</p>
-          </div>
-          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
-            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 02</div>
-            <h4 class="text-sm font-black text-white mt-1">Biết đủ là vũ khí tối thượng</h4>
-            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Đạt chỉ tiêu cơm gạo trong ngày → đóng máy, rời bàn, đi làm việc khác.</p>
-          </div>
-          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
-            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 03</div>
-            <h4 class="text-sm font-black text-white mt-1">Lãi kép sinh ra từ sự nhàm chán</h4>
-            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Đều đặn, nhỏ mà chắc. Kỷ luật lặp lại mỗi ngày mới tạo ra tài sản lớn.</p>
-          </div>
-        </div>
-
-        <!-- LỜI NHẮN CHÂN THÀNH -->
-        <div class="bg-gradient-to-br from-slate-900 via-slate-900/95 to-amber-950/30 border border-amber-500/30 rounded-2xl p-5 shadow-xl">
-          <div class="flex items-center gap-2 mb-1">
-            <i data-lucide="mail-open" class="w-5 h-5 text-amber-400"></i>
-            <h4 class="text-sm sm:text-base font-black text-amber-300">Lời Nhắn Chân Thành Gửi Người Mới</h4>
-          </div>
-          <p class="text-xs text-slate-400 mb-4">Những điều chúng tôi ước mình được nghe trước khi bước vào thị trường này.</p>
-
-          <div class="space-y-3">
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">1</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Chỉ dùng tiền nhàn rỗi — số tiền mất đi không ảnh hưởng cuộc sống</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Không vay mượn, không dùng tiền học của con, tiền chữa bệnh hay tiền sinh hoạt tháng này. Tiền "không được phép thua" sẽ khiến bạn sợ hãi và ra quyết định sai.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">2</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Đây là một nghề, không phải tấm vé số</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Ai hứa "x2 tài khoản trong tuần" thì hãy tránh xa. Mục tiêu tháng đầu tiên của bạn không phải là lãi thật nhiều, mà là <strong class="text-amber-300">giữ được vốn và giữ được kỷ luật</strong>.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-rose-500/15 text-rose-400 text-xs font-black flex items-center justify-center">3</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Stop Loss là bảo hiểm, không phải kẻ thù</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Mọi lệnh đều phải có SL ngay từ lúc vào. Tuyệt đối không gỡ SL, không nới SL, không "gồng thêm chút nữa". Phần lớn tài khoản cháy không phải vì một lệnh sai — mà vì một lệnh sai không chịu cắt.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-rose-500/15 text-rose-400 text-xs font-black flex items-center justify-center">4</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Thua một lệnh là bình thường — gỡ gạc mới là tai họa</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Sau lệnh thua, đừng nhân đôi khối lượng để "lấy lại". Hãy đóng máy, đi dạo, uống ly cà phê. Thị trường mở cửa mỗi ngày, cơ hội không bao giờ hết — chỉ có vốn là có thể hết.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">5</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Đánh đúng khối lượng, kể cả khi bạn "rất chắc chắn"</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Cảm giác chắc chắn là cảm giác nguy hiểm nhất. Hãy theo đúng bảng Lot khuyên dùng ở Trạm 2 — rủi ro mỗi lệnh chỉ nên vài phần trăm tài khoản.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">6</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Tập Demo trước, tiền thật sau</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Hãy bấm sai trên tài khoản Demo cho thật quen tay, thay vì bấm sai bằng tiền thật. Khi Demo ổn định 1–2 tuần, hãy bắt đầu với số vốn nhỏ.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">7</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Đừng dán mắt vào màn hình cả ngày</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Đặt lệnh chờ Limit, đặt SL/TP rồi để thị trường làm việc. Công việc, gia đình và sức khỏe của bạn quan trọng hơn mọi cây nến.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">8</span>
-              <div>
-                <h5 class="text-xs sm:text-sm font-bold text-white">Kiên nhẫn với chính mình</h5>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Không ai giỏi ngay từ tuần đầu. Ghi chép lại mỗi lệnh, hỏi khi chưa hiểu — trong nhóm không có câu hỏi nào là ngớ ngẩn.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Câu chốt -->
-          <div class="mt-4 p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-center">
-            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed italic">
-              "Thị trường là cây <strong class="text-emerald-300 not-italic">ATM trả lương mỗi ngày</strong> cho người có kỷ luật…<br>
-              nhưng là <strong class="text-rose-300 not-italic">sòng bạc nuốt sạch tiền</strong> của kẻ muốn giàu sau một đêm."
-            </p>
-            <div class="text-[11px] text-slate-400 mt-2">— Đội ngũ Nhà Ga Vàng</div>
-          </div>
-
-          <div class="mt-3 p-3 rounded-xl bg-slate-950/70 border border-slate-800 text-[11px] text-slate-400 leading-relaxed flex gap-2">
-            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
-            <span>Giao dịch Vàng/Forex có rủi ro cao và có thể mất toàn bộ vốn. Các con số trong video là ví dụ minh họa tư duy, không phải cam kết lợi nhuận.</span>
-          </div>
-        </div>
-
-        <!-- Next Button -->
-        <div class="flex items-center justify-end pt-2">
-          <button onclick="switchStation(1)" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-amber-500/20">
-            <span>Tôi đã hiểu — Lên Trạm 1: Mở Vé</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- CỘT PHẢI: VIDEO TƯ DUY (9:16) -->
-      <div class="video-column lg:col-span-5 space-y-4">
-        <div class="sticky top-32">
-          <div class="phone-mockup-card relative rounded-3xl p-4 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border-2 border-emerald-500/30 shadow-2xl">
-            <div class="flex justify-center items-center gap-2 mb-3">
-              <div class="w-12 h-1 bg-slate-800 rounded-full"></div>
-              <div class="w-2.5 h-2.5 bg-slate-800 rounded-full"></div>
-            </div>
-
-            <div class="flex items-center justify-between mb-2 px-1">
-              <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
-                  <i data-lucide="play" class="w-2.5 h-2.5 fill-emerald-400"></i> Video Tư Duy
-                </span>
-                <span class="text-xs font-bold text-slate-200 truncate">Hồ Sơ Vụ Án Số 01: Trade Cơm Gạo</span>
-              </div>
-              <span class="text-[11px] text-slate-400 font-mono">01:39</span>
-            </div>
-
-            <div class="phone-screen-container relative border border-slate-800/80 shadow-inner" id="video-screen-0">
-              <video id="real-video-0" playsinline controls class="w-full h-full object-contain bg-black" preload="metadata" poster="assets/thumb_tu_duy_com_gao.jpg">
-                <source src="assets/videos/video0_tu_duy_trade_com_gao.mp4" type="video/mp4">
-                Trình duyệt của bạn không hỗ trợ thẻ video.
-              </video>
-            </div>
-
-            <div class="mt-4 pt-3 border-t border-slate-800/80">
-              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Tua nhanh theo phân đoạn:</div>
-              <div class="grid grid-cols-3 gap-1.5 text-[11px]">
-                <button onclick="seekVideo(0, 0)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:00 Vụ án</button>
-                <button onclick="seekVideo(0, 19.7)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:19 Quán phở</button>
-                <button onclick="seekVideo(0, 39.4)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:39 Manh mối 1</button>
-                <button onclick="seekVideo(0, 57.3)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:57 Manh mối 2</button>
-                <button onclick="seekVideo(0, 72.1)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:12 Manh mối 3</button>
-                <button onclick="seekVideo(0, 87.8)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:27 Kết luận</button>
-              </div>
-            </div>
-
-            <div class="mt-3 text-center">
-              <span class="text-[11px] text-slate-500 italic">🎬 Video 1 trong series Tư Duy — các phần tiếp theo sẽ được cập nhật tại đây.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ========================================================================= -->
     <!-- TRẠM 1: MỞ VÉ (TÀI KHOẢN & THIẾT BỊ) -->
     <!-- ========================================================================= -->
-    <section id="station-1" class="station-pane hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <section id="station-1" class="station-pane active grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       
       <!-- CỘT TRÁI: NỘI DUNG ĐỌC & THAO TÁC (7 COLS ON DESKTOP) -->
       <div class="reading-column lg:col-span-7 space-y-6">
@@ -909,7 +713,7 @@
             <span>Về Trạm 2</span>
           </button>
           <button onclick="switchStation(4)" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-amber-500/20">
-            <span>Tiếp tục: Trạm 4 - Thao Trường Demo</span>
+            <span>Tiếp tục: Trạm 4 - Tư Duy</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
         </div>
@@ -919,90 +723,200 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- TRẠM 4: THAO TRƯỜNG DEMO & NHẬN VÉ VIP (TỐT NGHIỆP) -->
+    <!-- TRẠM 4: TƯ DUY TRADE CƠM GẠO -->
     <!-- ========================================================================= -->
-    <section id="station-4" class="station-pane hidden max-w-4xl mx-auto space-y-6">
-      
-      <!-- NỘI DUNG TỐT NGHIỆP & HÀNH ĐỘNG (FULL-WIDTH) -->
-      <div class="reading-column w-full space-y-6">
-        
+    <section id="station-4" class="station-pane hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- CỘT TRÁI: LỜI NHẮN CHÂN THÀNH -->
+      <div class="reading-column lg:col-span-7 space-y-6">
+
         <!-- Header Trạm -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg">
+        <div class="bg-slate-900/90 border border-emerald-500/30 rounded-2xl p-5 shadow-lg">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center font-black text-lg">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-black text-lg">
               04
             </div>
             <div>
-              <span class="text-xs uppercase tracking-wider font-semibold text-amber-400">Trạm Tốt Nghiệp</span>
-              <h3 class="text-lg sm:text-xl font-bold text-white">Thao Trường Demo: Nhận Vé Vào Khoang VIP</h3>
+              <span class="text-xs uppercase tracking-wider font-semibold text-emerald-400">Trạm Tư Duy — Chặng Cuối Trước Khi Bấm Lệnh</span>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Tư Duy "Trade Cơm Gạo" Đúng Đắn</h3>
             </div>
           </div>
           <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
-            Tại Nhà Ga Vàng, bạn không phải một "con bạc". Chúng tôi bắt buộc bạn hoàn thành tối thiểu 3 lệnh Demo chuẩn xác trước khi bước vào tài khoản Real. Điều này bảo vệ 100% tài sản của bạn!
+            Trước khi bắt đầu giao dịch thật, hãy dành <strong class="text-emerald-300">1 phút 39 giây</strong> xem video "Hồ sơ vụ án số 01" và đọc những lời nhắn bên dưới.
+            Kỹ thuật học 1 tuần là xong — nhưng <strong class="text-amber-300">tư duy sai thì kỹ thuật giỏi đến đâu cũng cháy tài khoản</strong>.
           </p>
-        </div>
-
-        <!-- 3 Nhiệm vụ Tốt Nghiệp Checklist -->
-        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg space-y-4">
-          <h4 class="text-sm font-bold text-amber-300 uppercase tracking-wider flex items-center gap-2">
-            <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
-            <span>Checklist 3 Nhiệm Vụ Tốt Nghiệp Demo</span>
-          </h4>
-
-          <div class="space-y-3">
-            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all">
-              <input type="checkbox" id="task1" onchange="checkGraduation()" class="mt-1 w-4 h-4 rounded text-amber-500 bg-slate-900 border-slate-700 focus:ring-amber-500 focus:ring-offset-slate-950">
-              <div class="text-xs text-slate-300">
-                <strong class="text-white block text-sm">Nhiệm vụ 1: Đặt 1 lệnh Demo chuẩn chỉ số</strong>
-                Thực hành đặt 1 lệnh Sell Limit hoặc Buy Limit có đủ <strong>Giá Đặt + Stop Loss (SL) + Take Profit (TP)</strong> theo tín hiệu mẫu.
-              </div>
-            </label>
-
-            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all">
-              <input type="checkbox" id="task2" onchange="checkGraduation()" class="mt-1 w-4 h-4 rounded text-amber-500 bg-slate-900 border-slate-700 focus:ring-amber-500 focus:ring-offset-slate-950">
-              <div class="text-xs text-slate-300">
-                <strong class="text-white block text-sm">Nhiệm vụ 2: Biết thao tác chốt 50% & dời SL về hòa</strong>
-                Khi lệnh có lãi chạm mốc TP1, biết cách đóng bớt 1/2 số lot (ví dụ đóng 0.01/0.02) và kéo SL về lại giá khớp ban đầu để không bao giờ bị lỗ ngược.
-              </div>
-            </label>
-
-            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all">
-              <input type="checkbox" id="task3" onchange="checkGraduation()" class="mt-1 w-4 h-4 rounded text-amber-500 bg-slate-900 border-slate-700 focus:ring-amber-500 focus:ring-offset-slate-950">
-              <div class="text-xs text-slate-300">
-                <strong class="text-white block text-sm">Nhiệm vụ 3: Chụp ảnh màn hình gửi Support duyệt</strong>
-                Chụp ảnh màn hình lịch sử lệnh demo trên MT5 để chuyên viên Nhà Ga Vàng kiểm tra bạn đã nắm đúng phương pháp chưa.
-              </div>
-            </label>
-          </div>
-
-          <!-- Nút Nộp Bài Nhận Vé VIP -->
-          <div class="pt-2">
-            <button onclick="openModal('vipModal')" id="btn-submit-graduation" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-black text-sm tracking-wide shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2 transition-all">
-              <i data-lucide="ticket" class="w-5 h-5"></i>
-              <span>NỘP BÀI TẬP DEMO & NHẬN VÉ KHOANG VIP</span>
+          <div class="mt-3">
+            <button onclick="triggerWatchVideo(4)" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-all shadow">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span>Xem Video: Tư Duy Trade Cơm Gạo (1:39)</span>
             </button>
           </div>
         </div>
 
-        <!-- 3 Lời Khuyên Vàng Cho Newbie -->
-        <div class="p-4 rounded-2xl bg-amber-950/20 border border-amber-500/20 space-y-2 text-xs text-amber-200/90">
-          <div class="font-bold text-amber-300 flex items-center gap-1.5">
-            <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400"></i>
-            <span>3 NGUYÊN TẮC THÉP TẠI NHÀ GA VÀNG:</span>
+        <!-- Tóm tắt 3 manh mối -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 01</div>
+            <h4 class="text-sm font-black text-white mt-1">Thắng cuối tuần, không cần thắng mọi lệnh</h4>
+            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Ngày mưa (chạm SL) mất 1 bát phở. Ngày nắng (đạt TP) thu cả ngày lương.</p>
           </div>
-          <p>• <strong>Không bao giờ thả rông Stop Loss:</strong> Lệnh nào không có SL = Bạn đang tự tay dâng tiền cho thị trường.</p>
-          <p>• <strong>Không nhồi lệnh gỡ gạc:</strong> Kỷ luật đi đúng số lot khuyên dùng.</p>
-          <p>• <strong>Ăn chắc mặc bền:</strong> Cán TP1 là chốt nửa và dời SL hòa ngay lập tức. Giữ được tiền trước, kiếm được tiền sau!</p>
+          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 02</div>
+            <h4 class="text-sm font-black text-white mt-1">Biết đủ là vũ khí tối thượng</h4>
+            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Đạt chỉ tiêu cơm gạo trong ngày → đóng máy, rời bàn, đi làm việc khác.</p>
+          </div>
+          <div class="bg-slate-900/80 border-2 border-slate-800 rounded-2xl p-4 hover:border-emerald-500/30 transition-all shadow-md">
+            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-wider">Manh mối 03</div>
+            <h4 class="text-sm font-black text-white mt-1">Lãi kép sinh ra từ sự nhàm chán</h4>
+            <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">Đều đặn, nhỏ mà chắc. Kỷ luật lặp lại mỗi ngày mới tạo ra tài sản lớn.</p>
+          </div>
+        </div>
+
+        <!-- LỜI NHẮN CHÂN THÀNH -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-900/95 to-amber-950/30 border border-amber-500/30 rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center gap-2 mb-1">
+            <i data-lucide="mail-open" class="w-5 h-5 text-amber-400"></i>
+            <h4 class="text-sm sm:text-base font-black text-amber-300">Lời Nhắn Chân Thành Gửi Người Mới</h4>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">Những điều chúng tôi ước mình được nghe trước khi bước vào thị trường này.</p>
+
+          <div class="space-y-3">
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">1</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Chỉ dùng tiền nhàn rỗi — số tiền mất đi không ảnh hưởng cuộc sống</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Không vay mượn, không dùng tiền học của con, tiền chữa bệnh hay tiền sinh hoạt tháng này. Tiền "không được phép thua" sẽ khiến bạn sợ hãi và ra quyết định sai.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">2</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Đây là một nghề, không phải tấm vé số</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Ai hứa "x2 tài khoản trong tuần" thì hãy tránh xa. Mục tiêu tháng đầu tiên của bạn không phải là lãi thật nhiều, mà là <strong class="text-amber-300">giữ được vốn và giữ được kỷ luật</strong>.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-rose-500/15 text-rose-400 text-xs font-black flex items-center justify-center">3</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Stop Loss là bảo hiểm, không phải kẻ thù</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Mọi lệnh đều phải có SL ngay từ lúc vào. Tuyệt đối không gỡ SL, không nới SL, không "gồng thêm chút nữa". Phần lớn tài khoản cháy không phải vì một lệnh sai — mà vì một lệnh sai không chịu cắt.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-rose-500/15 text-rose-400 text-xs font-black flex items-center justify-center">4</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Thua một lệnh là bình thường — gỡ gạc mới là tai họa</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Sau lệnh thua, đừng nhân đôi khối lượng để "lấy lại". Hãy đóng máy, đi dạo, uống ly cà phê. Thị trường mở cửa mỗi ngày, cơ hội không bao giờ hết — chỉ có vốn là có thể hết.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 text-xs font-black flex items-center justify-center">5</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Đánh đúng khối lượng, kể cả khi bạn "rất chắc chắn"</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Cảm giác chắc chắn là cảm giác nguy hiểm nhất. Hãy theo đúng bảng Lot khuyên dùng ở Trạm 2 — rủi ro mỗi lệnh chỉ nên vài phần trăm tài khoản.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">6</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Tập Demo trước, tiền thật sau</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Hãy bấm sai trên tài khoản Demo cho thật quen tay, thay vì bấm sai bằng tiền thật. Khi Demo ổn định 1–2 tuần, hãy bắt đầu với số vốn nhỏ.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">7</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Đừng dán mắt vào màn hình cả ngày</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Đặt lệnh chờ Limit, đặt SL/TP rồi để thị trường làm việc. Công việc, gia đình và sức khỏe của bạn quan trọng hơn mọi cây nến.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 text-xs font-black flex items-center justify-center">8</span>
+              <div>
+                <h5 class="text-xs sm:text-sm font-bold text-white">Kiên nhẫn với chính mình</h5>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">Không ai giỏi ngay từ tuần đầu. Ghi chép lại mỗi lệnh, hỏi khi chưa hiểu — trong nhóm không có câu hỏi nào là ngớ ngẩn.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Câu chốt -->
+          <div class="mt-4 p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-center">
+            <p class="text-xs sm:text-sm text-emerald-200 leading-relaxed italic">
+              "Thị trường là cây <strong class="text-emerald-300 not-italic">ATM trả lương mỗi ngày</strong> cho người có kỷ luật…<br>
+              nhưng là <strong class="text-rose-300 not-italic">sòng bạc nuốt sạch tiền</strong> của kẻ muốn giàu sau một đêm."
+            </p>
+            <div class="text-[11px] text-slate-400 mt-2">— Đội ngũ Nhà Ga Vàng</div>
+          </div>
+
+          <div class="mt-3 p-3 rounded-xl bg-slate-950/70 border border-slate-800 text-[11px] text-slate-400 leading-relaxed flex gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+            <span>Giao dịch Vàng/Forex có rủi ro cao và có thể mất toàn bộ vốn. Các con số trong video là ví dụ minh họa tư duy, không phải cam kết lợi nhuận.</span>
+          </div>
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="flex items-center justify-start pt-2">
+        <div class="flex items-center justify-between pt-2">
           <button onclick="switchStation(3)" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs flex items-center gap-2">
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
             <span>Về Trạm 3</span>
           </button>
+          <button onclick="openModal('supportModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+            <i data-lucide="headphones" class="w-4 h-4"></i>
+            <span>Liên hệ Support 1-1</span>
+          </button>
         </div>
+      </div>
 
+      <!-- CỘT PHẢI: VIDEO TƯ DUY (9:16) -->
+      <div class="video-column lg:col-span-5 space-y-4">
+        <div class="sticky top-32">
+          <div class="phone-mockup-card relative rounded-3xl p-4 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border-2 border-emerald-500/30 shadow-2xl">
+            <div class="flex justify-center items-center gap-2 mb-3">
+              <div class="w-12 h-1 bg-slate-800 rounded-full"></div>
+              <div class="w-2.5 h-2.5 bg-slate-800 rounded-full"></div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2 px-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
+                  <i data-lucide="play" class="w-2.5 h-2.5 fill-emerald-400"></i> Video Tư Duy
+                </span>
+                <span class="text-xs font-bold text-slate-200 truncate">Hồ Sơ Vụ Án Số 01: Trade Cơm Gạo</span>
+              </div>
+              <span class="text-[11px] text-slate-400 font-mono">01:39</span>
+            </div>
+
+            <div class="phone-screen-container relative border border-slate-800/80 shadow-inner" id="video-screen-4">
+              <video id="real-video-4" playsinline controls class="w-full h-full object-contain bg-black" preload="metadata" poster="assets/thumb_tu_duy_com_gao.jpg">
+                <source src="assets/videos/video0_tu_duy_trade_com_gao.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+              </video>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Tua nhanh theo phân đoạn:</div>
+              <div class="grid grid-cols-3 gap-1.5 text-[11px]">
+                <button onclick="seekVideo(4, 0)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:00 Vụ án</button>
+                <button onclick="seekVideo(4, 19.7)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:19 Quán phở</button>
+                <button onclick="seekVideo(4, 39.4)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:39 Manh mối 1</button>
+                <button onclick="seekVideo(4, 57.3)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:57 Manh mối 2</button>
+                <button onclick="seekVideo(4, 72.1)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:12 Manh mối 3</button>
+                <button onclick="seekVideo(4, 87.8)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:27 Kết luận</button>
+              </div>
+            </div>
+
+            <div class="mt-3 text-center">
+              <span class="text-[11px] text-slate-500 italic">🎬 Video 1 trong series Tư Duy — các phần tiếp theo sẽ được cập nhật tại đây.</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section>

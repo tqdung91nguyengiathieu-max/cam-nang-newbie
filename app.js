@@ -4,7 +4,7 @@
  */
 
 // Global State
-let currentStation = 0;
+let currentStation = 1;
 let currentMobileMode = 'read';
 let completedSteps = JSON.parse(localStorage.getItem('nhagavang_newbie_steps') || '[]');
 let activeVideoTimers = {};
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash;
   if (hash && hash.startsWith('#station-')) {
     const stId = parseInt(hash.replace('#station-', ''));
-    if (stId >= 0 && stId <= 4) {
+    if (stId >= 1 && stId <= 4) {
       switchStation(stId);
     }
   }
@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
 function switchStation(stationId) {
   currentStation = stationId;
 
-  // Auto-record visited station into progress (Trạm 0 is a mindset intro, not counted)
-  if (stationId >= 1 && !completedSteps.includes(stationId)) {
+  // Auto-record visited station into progress
+  if (!completedSteps.includes(stationId)) {
     completedSteps.push(stationId);
     localStorage.setItem('nhagavang_newbie_steps', JSON.stringify(completedSteps));
     updateProgressUI();
   }
 
-  // Pause the mindset video when leaving Trạm 0
-  if (stationId !== 0) {
-    const v0 = document.getElementById('real-video-0');
-    if (v0) v0.pause();
+  // Pause the mindset video when leaving Trạm 4
+  if (stationId !== 4) {
+    const v4 = document.getElementById('real-video-4');
+    if (v4) v4.pause();
   }
 
   // Update tabs
-  for (let i = 0; i <= 4; i++) {
+  for (let i = 1; i <= 4; i++) {
     const tabBtn = document.getElementById(`tab-btn-${i}`);
     const pane = document.getElementById(`station-${i}`);
     
@@ -72,10 +72,10 @@ function switchStation(stationId) {
     }
   }
 
-  // Toggle Hero Intro Banner (Only show on the first screen: Station 0)
+  // Toggle Hero Intro Banner (Only show on Station 1)
   const heroBanner = document.getElementById('hero-banner');
   if (heroBanner) {
-    if (stationId === 0) {
+    if (stationId === 1) {
       heroBanner.classList.remove('hidden');
     } else {
       heroBanner.classList.add('hidden');
@@ -130,6 +130,10 @@ function setMobileMode(mode) {
  * 3. Progress Tracking & LocalStorage
  */
 function initProgress() {
+  if (!completedSteps.includes(1)) {
+    completedSteps.push(1);
+    localStorage.setItem('nhagavang_newbie_steps', JSON.stringify(completedSteps));
+  }
   updateProgressUI();
 }
 
