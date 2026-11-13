@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash;
   if (hash && hash.startsWith('#station-')) {
     const stId = parseInt(hash.replace('#station-', ''));
-    if (stId >= 1 && stId <= 4) {
+    if (stId >= 1 && stId <= 5) {
       switchStation(stId);
     }
   }
@@ -40,14 +40,18 @@ function switchStation(stationId) {
     updateProgressUI();
   }
 
-  // Pause the mindset video when leaving Trạm 4
+  // Pause mindset videos when leaving Trạm 4 / Trạm 5
   if (stationId !== 4) {
     const v4 = document.getElementById('real-video-4');
     if (v4) v4.pause();
   }
+  if (stationId !== 5) {
+    const v5 = document.getElementById('real-video-5');
+    if (v5) v5.pause();
+  }
 
   // Update tabs
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 5; i++) {
     const tabBtn = document.getElementById(`tab-btn-${i}`);
     const pane = document.getElementById(`station-${i}`);
     
@@ -151,8 +155,8 @@ function toggleStepCompleted(stationId) {
 }
 
 function updateProgressUI() {
-  const totalStations = 4;
-  const count = completedSteps.filter((s) => s >= 1 && s <= 4).length;
+  const totalStations = 5;
+  const count = completedSteps.filter((s) => s >= 1 && s <= 5).length;
   const percent = Math.round((count / totalStations) * 100);
 
   // Update text & percent
@@ -171,7 +175,7 @@ function updateProgressUI() {
   }
 
   // Update button badges
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 5; i++) {
     const isDone = completedSteps.includes(i);
     const tabBtn = document.getElementById(`tab-btn-${i}`);
     const toggleBtn = document.getElementById(`btn-complete-${i}`);

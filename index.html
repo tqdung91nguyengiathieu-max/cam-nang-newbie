@@ -81,7 +81,7 @@
         <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
           <div class="text-right hidden sm:block">
             <div class="text-[10px] text-slate-400 font-medium">TIẾN ĐỘ LÊN TÀU</div>
-            <div class="text-xs font-bold text-amber-400" id="progressText">0 / 4 Trạm</div>
+            <div class="text-xs font-bold text-amber-400" id="progressText">0 / 5 Trạm</div>
           </div>
           <div class="w-8 h-8 relative flex items-center justify-center">
             <svg class="w-8 h-8 transform -rotate-90">
@@ -113,6 +113,10 @@
         <button onclick="switchStation(4)" id="tab-btn-4" class="station-tab flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-slate-400 hover:text-slate-200">
           <span class="w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold bg-slate-800 text-slate-300 step-badge">4</span>
           <span>Trạm 4: Tư Duy</span>
+        </button>
+        <button onclick="switchStation(5)" id="tab-btn-5" class="station-tab flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all text-slate-400 hover:text-slate-200">
+          <span class="w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold bg-slate-800 text-slate-300 step-badge">5</span>
+          <span>Trạm 5: 5 Bẫy Mất Tiền</span>
         </button>
       </div>
     </div>
@@ -863,9 +867,9 @@
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
             <span>Về Trạm 3</span>
           </button>
-          <button onclick="openModal('supportModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20">
-            <i data-lucide="headphones" class="w-4 h-4"></i>
-            <span>Liên hệ Support 1-1</span>
+          <button onclick="switchStation(5)" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-400 hover:to-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-rose-500/20">
+            <span>Tiếp tục: Trạm 5 - 5 Bẫy Mất Tiền</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
         </div>
       </div>
@@ -882,7 +886,7 @@
             <div class="flex items-center justify-between mb-2 px-1">
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
-                  <i data-lucide="play" class="w-2.5 h-2.5 fill-emerald-400"></i> Video Tư Duy
+                  <i data-lucide="play" class="w-2.5 h-2.5 fill-emerald-400"></i> Video Phần 1
                 </span>
                 <span class="text-xs font-bold text-slate-200 truncate">Hồ Sơ Vụ Án Số 01: Trade Cơm Gạo</span>
               </div>
@@ -909,7 +913,227 @@
             </div>
 
             <div class="mt-3 text-center">
-              <span class="text-[11px] text-slate-500 italic">🎬 Video 1 trong series Tư Duy — các phần tiếp theo sẽ được cập nhật tại đây.</span>
+              <span class="text-[11px] text-emerald-400/90 font-medium">🎬 Đã xem xong Phần 1? Bấm sang Trạm 5 để xem Hồ Sơ Vụ Án Số 02!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TRẠM 5: MỔ XẺ 5 LÝ DO KHIẾN NGƯỜI MỚI HAY MẤT TIỀN NHẤT (HỒ SƠ SỐ 02) -->
+    <!-- ========================================================================= -->
+    <section id="station-5" class="station-pane hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- CỘT TRÁI: MỔ XẺ 5 CÁI BẪY & 4 TRỤ CỘT BẢO VỆ VỐN -->
+      <div class="reading-column lg:col-span-7 space-y-6">
+
+        <!-- Header Trạm 5 -->
+        <div class="bg-slate-900/90 border border-rose-500/30 rounded-2xl p-5 shadow-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-400 flex items-center justify-center font-black text-lg">
+              05
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-wider font-semibold text-rose-400">Hồ Sơ Vụ Án Số 02 — Phá Án Tâm Lý Giao Dịch</span>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Mổ Xẻ 5 Lý Do Khiến Người Mới Hay Mất Tiền Nhất</h3>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+            Tại sao <strong class="text-rose-400">90% người mới</strong> bước vào thị trường Vàng lại mất tiền ngay tuần đầu tiên? Họ không thua vì thị trường quá khó, mà vì dẫm phải đúng <strong class="text-amber-300">5 cái bẫy tâm lý lặp đi lặp lại</strong> dưới đây. Hãy xem video <strong class="text-emerald-300">1 phút 50 giây</strong> để tự soi lại chính mình trước khi vào tiền thật!
+          </p>
+          <div class="mt-3">
+            <button onclick="triggerWatchVideo(5)" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-rose-500 hover:bg-rose-400 text-white transition-all shadow">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span>Xem Video Phần 2: 5 Bẫy Khiến Người Mới Mất Tiền (1:50)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 CÁI BẪY KHIẾN NGƯỜI MỚI CHÁY TÀI KHOẢN -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-3.5">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="flame" class="w-5 h-5 text-rose-400"></i>
+              <h4 class="text-sm sm:text-base font-black text-white uppercase tracking-wide">5 Cái Bẫy "Đốt Cháy" Tài Khoản Người Mới</h4>
+            </div>
+            <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-rose-500/15 border border-rose-500/30 text-rose-300 font-bold">Bấm để tua nhanh video</span>
+          </div>
+
+          <!-- Bẫy 01 -->
+          <div onclick="seekVideo(5, 14.56)" class="cursor-pointer group p-4 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800 hover:border-rose-500/40 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-400 text-xs font-black flex-shrink-0">BẪY 01</span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs sm:text-sm font-bold text-white group-hover:text-rose-300 transition-colors">Nạp tiền thật & bấm lệnh khi chưa hiểu Luật Chơi</h5>
+                  <span class="text-[10px] font-mono text-slate-400">00:14 ▶</span>
+                </div>
+                <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Chưa phân biệt nổi <strong class="text-emerald-300">0.01 lot ($1/giá)</strong> khác <strong class="text-rose-400">0.10 lot ($10/giá)</strong> bao nhiêu tiền, chưa biết đặt điểm <strong class="text-amber-300">Cắt lỗ (SL)</strong> ở đâu đã vội bấm mua/bán theo cảm tính. Chỉ 1 lần bấm nhầm khối lượng khi Vàng giật mạnh là tài khoản bay màu trong vài phút!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bẫy 02 -->
+          <div onclick="seekVideo(5, 31.25)" class="cursor-pointer group p-4 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800 hover:border-rose-500/40 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-black flex-shrink-0">BẪY 02</span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs sm:text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Ăn thì non (+$2 chốt vội) — Gồng lỗ thì cực kỳ lì</h5>
+                  <span class="text-[10px] font-mono text-slate-400">00:31 ▶</span>
+                </div>
+                <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Lệnh vừa xanh được <strong class="text-emerald-300">+$2 – +$3</strong> đã tim đập chân run chốt non vì sợ mất lãi. Nhưng khi lệnh âm <strong class="text-rose-400">-$20 → -$50+</strong> lại tiếc tiền không dám cắt, thậm chí <strong class="text-rose-400">xóa luôn SL</strong> để "khấn" giá hồi về. Kết quả: Thắng 9 lệnh nhỏ không bù nổi 1 lệnh gồng lỗ cháy túi!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bẫy 03 -->
+          <div onclick="seekVideo(5, 51.00)" class="cursor-pointer group p-4 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800 hover:border-rose-500/40 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-400 text-xs font-black flex-shrink-0">BẪY 03</span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs sm:text-sm font-bold text-white group-hover:text-rose-300 transition-colors">Cay cú gỡ gạc ngay sau một lệnh thua (Revenge Trading)</h5>
+                  <span class="text-[10px] font-mono text-slate-400">00:51 ▶</span>
+                </div>
+                <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Vừa chạm SL mất <strong class="text-amber-300">-$10</strong> (chỉ bằng 1 bát phở sáng theo đúng kỷ luật), thay vì đóng máy nghỉ ngơi thì máu nóng dồn lên não, tự ý <strong class="text-rose-400">nhồi lệnh gấp đôi, gấp ba khối lượng</strong> để đòi lại tiền ngay lập tức. Từ một vết xước nhỏ biến thành thảm họa mất trắng!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bẫy 04 -->
+          <div onclick="seekVideo(5, 67.53)" class="cursor-pointer group p-4 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800 hover:border-rose-500/40 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="px-2.5 py-1 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-black flex-shrink-0">BẪY 04</span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs sm:text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Đánh đều tay ở lệnh nhỏ — Tất tay đúng vào lệnh thua</h5>
+                  <span class="text-[10px] font-mono text-slate-400">01:07 ▶</span>
+                </div>
+                <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Lúc đi `0.01 lot` thì thắng liên tiếp 5 lệnh (`+$80`). Thấy kiếm tiền dễ quá liền sinh tâm lý ảo tưởng sức mạnh, sang lệnh thứ 6 tự ý nâng vọt lên <strong class="text-rose-400">0.20 lot (gấp 10–20 lần)</strong>. Đúng lệnh đó thị trường quét SL `-$180`, cuốn sạch thành quả cả tuần kỷ luật!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bẫy 05 -->
+          <div onclick="seekVideo(5, 84.41)" class="cursor-pointer group p-4 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800 hover:border-rose-500/40 transition-all">
+            <div class="flex items-start gap-3">
+              <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-400 text-xs font-black flex-shrink-0">BẪY 05</span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="text-xs sm:text-sm font-bold text-white group-hover:text-rose-300 transition-colors">Đứng núi này trông núi nọ — Theo 5–7 đội nhóm cùng lúc</h5>
+                  <span class="text-[10px] font-mono text-slate-400">01:24 ▶</span>
+                </div>
+                <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  Nhóm A hô Buy, nhóm B hô Sell, nhóm C hô nhồi lệnh — ngày bấm <strong class="text-rose-400">15 đến 20 lệnh rác</strong> liên tục (*Overtrading*). Càng vào nhiều lệnh rác, lệnh Buy/Sell đá nhau, phí sàn ngốn sạch và tài khoản càng nhanh cạn kiệt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 NGUYÊN TẮC BẢO VỆ VỐN SỐNG CÒN -->
+        <div class="bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/40 rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+              <h4 class="text-sm sm:text-base font-black text-emerald-300 uppercase">Kết Luận Phá Án: 4 Nguyên Tắc Bảo Vệ Vốn Sống Còn</h4>
+            </div>
+            <button onclick="seekVideo(5, 96.41)" class="text-[10px] font-mono px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30">
+              Xem đoạn kết (01:36) ▶
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-emerald-500/30">
+              <div class="text-[11px] font-black text-emerald-400 uppercase">Trụ cột 01</div>
+              <h5 class="text-xs sm:text-sm font-bold text-white mt-0.5">Đi đều khối lượng (Lot) như cỗ máy</h5>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">Tuân thủ đúng bảng vốn ở Trạm 2 (VD: $500 chỉ đi 0.02 lot). Thắng không kiêu, không tự ý nâng Lot.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-emerald-500/30">
+              <div class="text-[11px] font-black text-emerald-400 uppercase">Trụ cột 02</div>
+              <h5 class="text-xs sm:text-sm font-bold text-white mt-0.5">Luôn khóa chặt điểm cắt lỗ (SL 7–10 giá)</h5>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">Coi SL là bảo hiểm bắt buộc của tài khoản. Tuyệt đối không bao giờ xóa hay nới rộng SL.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-emerald-500/30">
+              <div class="text-[11px] font-black text-emerald-400 uppercase">Trụ cột 03</div>
+              <h5 class="text-xs sm:text-sm font-bold text-white mt-0.5">Tuyệt đối không cay cú gỡ gạc</h5>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">Chạm SL hoặc đạt chỉ tiêu cơm gạo trong ngày là đóng máy nghỉ ngơi, ngày mai làm lại.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/70 border border-emerald-500/30">
+              <div class="text-[11px] font-black text-emerald-400 uppercase">Trụ cột 04</div>
+              <h5 class="text-xs sm:text-sm font-bold text-white mt-0.5">Thuần thục trên tài khoản Demo trước</h5>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">Tập bấm lệnh nhuần nhuyễn trên Demo trước khi đưa đồng tiền mồ hôi vào thị trường thật.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between pt-2">
+          <button onclick="switchStation(4)" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs flex items-center gap-2">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Về Trạm 4: Tư Duy</span>
+          </button>
+          <button onclick="openModal('supportModal')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+            <i data-lucide="headphones" class="w-4 h-4"></i>
+            <span>Liên hệ Support 1-1</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: VIDEO PHẦN 2 (9:16) -->
+      <div class="video-column lg:col-span-5 space-y-4">
+        <div class="sticky top-32">
+          <div class="phone-mockup-card relative rounded-3xl p-4 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border-2 border-rose-500/30 shadow-2xl">
+            <div class="flex justify-center items-center gap-2 mb-3">
+              <div class="w-12 h-1 bg-slate-800 rounded-full"></div>
+              <div class="w-2.5 h-2.5 bg-slate-800 rounded-full"></div>
+            </div>
+
+            <div class="flex items-center justify-between mb-2 px-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 border border-rose-500/40 text-rose-400 text-[10px] font-bold tracking-wider uppercase flex items-center gap-1">
+                  <i data-lucide="play" class="w-2.5 h-2.5 fill-rose-400"></i> Video Phần 2
+                </span>
+                <span class="text-xs font-bold text-slate-200 truncate">Hồ Sơ Số 02: 5 Bẫy Khiến Người Mới Mất Tiền</span>
+              </div>
+              <span class="text-[11px] text-slate-400 font-mono">01:50</span>
+            </div>
+
+            <div class="phone-screen-container relative border border-slate-800/80 shadow-inner" id="video-screen-5">
+              <video id="real-video-5" playsinline controls class="w-full h-full object-contain bg-black" preload="metadata" poster="assets/thumb_nam_ly_do_mat_tien.jpg">
+                <source src="assets/videos/video2_nam_ly_do_mat_tien.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+              </video>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Tua nhanh theo phân đoạn:</div>
+              <div class="grid grid-cols-3 gap-1.5 text-[11px]">
+                <button onclick="seekVideo(5, 0)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:00 Hồ sơ 02</button>
+                <button onclick="seekVideo(5, 14.56)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:14 Bẫy 01</button>
+                <button onclick="seekVideo(5, 31.25)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:31 Bẫy 02</button>
+                <button onclick="seekVideo(5, 51.00)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">00:51 Bẫy 03</button>
+                <button onclick="seekVideo(5, 67.53)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:07 Bẫy 04</button>
+                <button onclick="seekVideo(5, 84.41)" class="px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-center truncate">01:24 Bẫy 05</button>
+              </div>
+              <button onclick="seekVideo(5, 96.41)" class="mt-1.5 w-full px-2 py-1.5 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold text-center">
+                01:36 Kết luận: 4 Nguyên tắc bảo vệ vốn sống còn
+              </button>
+            </div>
+
+            <div class="mt-3 text-center">
+              <span class="text-[11px] text-slate-400 italic">🎬 Hồ Sơ Vụ Án Số 02 — Linh vật Thám tử Măng-tô & Nhà Ga Vàng</span>
             </div>
           </div>
         </div>
